@@ -7,7 +7,11 @@ public class P120812 {
 		int[] array = new int[]{1,2,3,3,3,4,4,4};
 		List<Integer> result = func(array);
 
-		System.out.println(result);
+		if (result.size() > 1) {
+			System.out.println(-1);
+		} else {
+			System.out.println(result.get(0));
+		}
 	}
 
 	public List<Integer> func(int[] array) {
