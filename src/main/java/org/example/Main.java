@@ -1,7 +1,6 @@
 package org.example;
 
-import org.basic.P120811;
-import org.basic.P120812;
+
 import org.basic.P120813;
 
 public class Main {
