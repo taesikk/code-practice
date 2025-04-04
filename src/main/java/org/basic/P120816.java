@@ -7,18 +7,18 @@ public class P120816 {
 	 */
 	public void p120816() {
 		//7,10-2, 4,12-3
-		int slice = 4;
-		int n = 12;
+		int slice = 7;
+		int n = 10;
 
 		int pizza = slice;
 		int man = n;
 
-		if (n <= slice) {
+		if (man <= pizza) {
 			System.out.println(1);
-		} else if (pizza%man == 0) {
-			System.out.println(pizza/man);
+		} else if (man%pizza == 0) {
+			System.out.println(man/pizza);
 		} else {
-			System.out.println(pizza/man + 1);
+			System.out.println(man/pizza + 1);
 		}
 	}
 }
