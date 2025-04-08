@@ -2,6 +2,7 @@ package org.example;
 
 
 import org.basic.*;
+import org.level1.P42576;
 
 
 public class Main {
@@ -20,8 +21,8 @@ public class Main {
 //		new P120824().p120824();
 //		new P120825().p120825();
 //		new P120826().p120826();
-		new P120829().p120829();
-
+//		new P120829().p120829();
+		new P42576().p42576();
 
 
 

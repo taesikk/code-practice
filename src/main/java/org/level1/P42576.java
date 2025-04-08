@@ -16,19 +16,18 @@ public class P42576 {
 	 * 참가자 중에는 동명이인이 있을 수 있습니다.
 	 */
 	public void p42576() {
-		String[] participant = new String[]{"leo", "kiki", "eden"};
-		String[] compltion = new String[]{"eden", "kiki"};
+		String[] participant = new String[]{"mislav", "stanko", "mislav", "ana"};
+		String[] compltion = new String[]{"stanko", "ana", "mislav"};
 
 		List<String> participantList = Arrays.asList(participant);
 		List<String> completionList = Arrays.asList(compltion);
 
-//		List<String> result = participantList.stream().filter(part -> completionList.stream().noneMatch(comple -> {
-//			return part.equals(comple);
-//		})).collect(Collectors.toList());
 		String result = "";
-		for (String comple : completionList) {
-			if (!participantList.contains(comple)) {
-				result = comple;
+		for (String part : participantList) {
+			if (completionList.contains(part)) {
+
+			} else {
+				result = part;
 			}
 		}
 
