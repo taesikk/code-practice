@@ -1,7 +1,6 @@
 package org.level1;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class P42576 {
 	/**
@@ -16,18 +15,24 @@ public class P42576 {
 	 * 참가자 중에는 동명이인이 있을 수 있습니다.
 	 */
 	public void p42576() {
-		String[] participant = new String[]{"mislav", "stanko", "mislav", "ana"};
-		String[] compltion = new String[]{"stanko", "ana", "mislav"};
+		String[] participant = new String[]{"mislav", "ana", "mislav", "ana"};
+		String[] completion = new String[]{"stanko", "ana", "mislav"};
 
 		List<String> participantList = Arrays.asList(participant);
-		List<String> completionList = Arrays.asList(compltion);
+		List<String> completionList = Arrays.asList(completion);
+		Map<String, Integer> nameMap = new HashMap<>();
 
 		String result = "";
 		for (String part : participantList) {
-			if (completionList.contains(part)) {
+			nameMap.put(part, nameMap.getOrDefault(part, 0) + 1);
+		}
+		for (String comple : completionList) {
+			nameMap.put(comple, nameMap.get(comple) - 1);
+		}
 
-			} else {
-				result = part;
+		for (String nm : nameMap.keySet()) {
+			if (nameMap.get(nm) != 0) {
+				result = nm;
 			}
 		}
 
